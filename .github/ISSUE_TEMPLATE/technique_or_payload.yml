@@ -1,0 +1,47 @@
+name: Technique or payload proposal
+description: Propose a new bypass technique, request mutation, or payload list change.
+title: "[Technique]: "
+labels:
+  - enhancement
+  - technique
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Keep examples focused on authorized testing. Do not include private target data, credentials, tokens, customer data, or non-public vulnerability details.
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Behavior being tested
+      description: What parser, proxy, CDN, WAF, framework, routing, normalization, or trust-boundary behavior does this exercise?
+    validations:
+      required: true
+  - type: textarea
+    id: request_shape
+    attributes:
+      label: Example request shape
+      description: Show the request mutation or payload. Use example.test or a local target.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: difference
+    attributes:
+      label: Difference from existing techniques
+      description: Explain why this is not already covered by current techniques or payload files.
+    validations:
+      required: true
+  - type: textarea
+    id: expected_output
+    attributes:
+      label: Expected output or signal
+      description: What status, body, redirect, scoring, replay, or filtering behavior should NoMore403 surface?
+    validations:
+      required: false
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Link public references, writeups, specs, or local reproduction details when available.
+    validations:
+      required: false
